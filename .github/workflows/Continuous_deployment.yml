@@ -1,0 +1,17 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ "main" ]
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_DEPLOY_TO_PROD: true
