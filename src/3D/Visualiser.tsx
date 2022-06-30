@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import './Visualiser.scss'
 
-import { OrbitControls, TorusKnot } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 
 export default function Visualiser() {
