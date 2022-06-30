@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
+    "./src/index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx,scss}",
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'outfit': ['Outfit', 'sans-serif'] 
+      },
       colors:{
         primary: '#FF8888',
         secondary: '#ffc388',

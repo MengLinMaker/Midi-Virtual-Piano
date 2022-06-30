@@ -1,9 +1,9 @@
 @tailwind base;
 
 * {
-  @apply transition;
+  @apply transition select-none;
 }
 
 body {
-  @apply relative h-screen;
+  @apply relative h-screen font-outfit;
 }
