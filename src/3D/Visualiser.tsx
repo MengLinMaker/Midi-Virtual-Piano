@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import './Visualiser.scss'
 
 import { OrbitControls } from '@react-three/drei'
