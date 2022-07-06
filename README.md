@@ -34,6 +34,7 @@ Creating a virtual piano video should be easy and fast. Skip tedious rendering a
 | [Musescore](https://musescore.org/)           | Youtube integration. Super fast rendering with score   | No control.                                   |
 | Manual Video editing                          | tremendous control.                           | Time consuming.                                        |
 | Blender                                       | tremendous control. Quality render.           | Time consuming. Slow render.                           |
+| [Synthesia](https://synthesiagame.com/)       | Easy to use.                                  | Simple looking. Less customisability.               |
 
 **Desirable features:**
 * Cross platform support - Windows, MacOS, Linux...
@@ -46,6 +47,7 @@ Creating a virtual piano video should be easy and fast. Skip tedious rendering a
 
 ## User Research
 **Sources:**
+* Myself - MengLinMaker is a user
 * MusicalBasics Discord
 * Musescore community
 
