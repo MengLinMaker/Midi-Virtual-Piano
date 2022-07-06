@@ -44,8 +44,10 @@ Creating a virtual piano video should be easy and fast. Skip tedious rendering a
 * Simple defaults with customisability
 * Virtual LED
 
-## Market Research
-
+## User Research
+**Sources:**
+* MusicalBasics Discord
+* Musescore community
 
 
 
