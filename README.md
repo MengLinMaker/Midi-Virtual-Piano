@@ -7,10 +7,26 @@ Creating a virtual piano video should be easy and fast. Skip tedious rendering a
 
 
 
-# Design process
-Aim: to create an app that simplifies the video creation workflow for composers. (specifically for piano composers).
+<pre>
 
-## Research
+
+
+</pre>
+
+# Design process
+
+## Aim
+**To create an app that simplifies the video creation workflow for composers. (specifically for piano composers).**
+
+**Questions to be answered:**
+* What is the fastest workflow?
+* Why are certain types of visualisations used?
+
+**Perfromance measures:**
+* Workflow time reduction
+* Time spent on app compared to competitors
+
+## Market Research
  Competition                                    | Pros                                          | Cons                                                   |
 | :-------------------------------------------- |:----------------------------------------------| :------------------------------------------------------|
 | [PianoVFX](https://piano-vfx.com/)            | Quality renders. Basic video editing features.| [Buggy to some users (crashes)](https://www.reddit.com/r/piano/comments/fsqyte/i_made_a_piano_visualizer_free_to_download/). Clunky navigation. No Mac and Linux version.             |
@@ -28,7 +44,16 @@ Aim: to create an app that simplifies the video creation workflow for composers.
 * Simple defaults with customisability
 * Virtual LED
 
+## Market Research
 
 
 
 
+
+<pre>
+
+
+
+</pre>
+
+# Development process
