@@ -1,0 +1,6 @@
+@tailwind components;
+
+.visualiser {
+  @apply absolute -z-50 h-screen w-screen overflow-hidden;
+  @apply cursor-none;
+}

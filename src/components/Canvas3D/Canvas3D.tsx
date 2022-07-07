@@ -1,13 +1,15 @@
 import { useRef, useState } from 'react'
-import './Visualiser.scss'
-
 import { OrbitControls } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 
-export default function Visualiser() {
-  
+import './Canvas3D.scss'
+import { UtilCursor } from '../../components'
+
+export default function Canvas3D() {
+
   return (
-    <section className='visualiser'>
+    <section id="3Dcanvas" className='visualiser'>
+      <UtilCursor/>
       <Canvas>
         <OrbitControls/>
         <ambientLight/>
@@ -18,6 +20,7 @@ export default function Visualiser() {
     </section>
   )
 }
+
 
 
 function Box(props:any) {

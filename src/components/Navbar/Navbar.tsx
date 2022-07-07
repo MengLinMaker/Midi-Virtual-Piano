@@ -1,7 +1,6 @@
 import './Navbar.scss'
-import sourceIcon from '../../assets/nav-icons/icons8-add-image-96.png'
-import editIcon from '../../assets/nav-icons/icons8-video-trimming-96.png'
-import downloadIcon from '../../assets/nav-icons/icons8-download-96.png'
+import { sourceIcon, editIcon, exportIcon } from '../../assets/icons/nav-icons'
+
 
 
 export default function Navbar() {
@@ -17,8 +16,8 @@ export default function Navbar() {
         <p className="menu--description">Edit</p>
       </div>
       <div className="nav--menu">
-        <img src={downloadIcon} alt="Download icon" className="menu--icon" />
-        <p className="menu--description">Download</p>
+        <img src={exportIcon} alt="Export icon" className="menu--icon" />
+        <p className="menu--description">Export</p>
       </div>
     </section>
   )
