@@ -26,7 +26,7 @@ Creating a virtual piano video should be easy and fast. Skip tedious rendering a
 * Workflow time reduction
 * Time spent on app compared to competitors
 
-## Market Research
+## Research
  Competition                                    | Pros                                          | Cons                                                   |
 | :-------------------------------------------- |:----------------------------------------------| :------------------------------------------------------|
 | [PianoVFX](https://piano-vfx.com/)            | Quality renders. Basic video editing features.| [Buggy to some users (crashes)](https://www.reddit.com/r/piano/comments/fsqyte/i_made_a_piano_visualizer_free_to_download/). Clunky navigation. No Mac and Linux version.             |
@@ -45,8 +45,7 @@ Creating a virtual piano video should be easy and fast. Skip tedious rendering a
 * Simple defaults with customisability
 * Virtual LED
 
-## User Research
-**Sources:**
+**User Research Sources:**
 * Myself - MengLinMaker is a user
 * MusicalBasics Discord
 * Musescore community
