@@ -16,8 +16,22 @@ export default function UtilCursor({src}:any) {
   }
 
   function cursorDown(e:MouseEvent) {
-    cursor.current.style.transform = 'scale(2)'
-    cursorIcon.current.style.opacity = 1
+    if (cursorIcon.current.style.opacity == 0) {
+      function updateCursor(imgSrc:string){ 
+        cursor.current.style.transform = 'scale(2)'
+        cursorIcon.current.style.opacity = 1
+        cursorIcon.current.src = imgSrc
+      }
+
+      switch (e.button) {
+        case 0:
+          updateCursor(rotateIcon)
+          break
+        case 2:
+          updateCursor(panIcon)
+          break
+      }
+    }
   }
 
   function cursorUp(e:MouseEvent) {
@@ -30,7 +44,7 @@ export default function UtilCursor({src}:any) {
     document.addEventListener('mousedown',cursorDown)
     document.addEventListener('mouseup',cursorUp)
     return () => {
-      document.removeEventListener('mousemove',cursorMove);
+      document.removeEventListener('mousemove',cursorMove)
       document.removeEventListener('mousedown',cursorDown)
       document.removeEventListener('mouseup',cursorUp)
     }
@@ -38,7 +52,7 @@ export default function UtilCursor({src}:any) {
 
   return (
     <div ref={cursor} className="utilcursor">
-      <img ref={cursorIcon} src={src} alt={src} className="utilcursor-icon" />
+      <img ref={cursorIcon} className="utilcursor-icon" />
     </div>
   )
 }

@@ -4,10 +4,10 @@
   @apply absolute z-50 -translate-x-1/2 -translate-y-1/2;
   @apply w-4 h-4 rounded-full bg-white;
   box-shadow: 0 0 3px black;
-  @apply pointer-events-none;
+  @apply pointer-events-none ease-in;
 
   .utilcursor-icon {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
-    @apply w-3/4 h-3/4;
+    @apply w-3/4 h-3/4 opacity-0 delay-75 ease-in;
   }
 }
