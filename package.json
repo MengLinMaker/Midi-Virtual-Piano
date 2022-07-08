@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^9.16.0",
+    "@react-three/drei": "^9.17.0",
     "@react-three/fiber": "^8.0.27",
     "npm": "^8.13.2",
     "react": "^18.0.0",
