@@ -2,12 +2,12 @@ import { fromEvent, Observable } from "rxjs";
 
 
 
-class MouseEvent {
+class MouseEventClass {
   #mouseState:any
 
-  #moveEvent:Observable<Event>
-  #downEvent:Observable<Event>
-  #upEvent:Observable<Event>
+  #moveEvent:any
+  #downEvent:any
+  #upEvent:any
 
   // create event listeners for mouse
   constructor() {
@@ -20,8 +20,18 @@ class MouseEvent {
     this.#upEvent.subscribe(this.#setMouseState.bind(this))
   }
 
-  #setMouseState(e:any) {
-    this.#mouseState = e
+  #setMouseState(e:MouseEvent) {
+    this.#mouseState = {
+      altKey: e.altKey,
+      ctrlKey: e.ctrlKey,
+      shiftKey: e.shiftKey,
+      movementX: e.movementX,
+      movementY: e.movementY,
+      timeStamp: e.timeStamp,
+      type: e.type,
+      x: e.x,
+      y: e.y,
+    }
   }
 
   getMouseState() {
@@ -45,5 +55,5 @@ class MouseEvent {
 
 
 // Exporting mouseEvent instance. Only one instance is needed.
-const mouseEvent = new MouseEvent
+const mouseEvent = new MouseEventClass
 export default mouseEvent
