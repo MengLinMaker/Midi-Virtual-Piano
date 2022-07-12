@@ -3,20 +3,26 @@
 .nav {
   @apply absolute z-20   bottom-0   w-full;
   @apply px-2   flex   justify-center;
-  @apply bg-light_bg   text-light_txt   brightness-90;
-  @apply dark:bg-dark_bg   dark:text-dark_txt   dark:brightness-100;
+  @apply bg-light_bg   text-light_txt;
+  @apply dark:bg-dark_bg   dark:text-dark_txt;
 
   .nav--menu {
     @apply relative w-24   text-center;
     @apply bg-light_bg   hover:brightness-95;
-    @apply text-xs p-2;
+    @apply text-xs pt-2;
 
     .menu--icon {
       @apply h-6 mb-1 mx-auto;
     }
 
     .menu--select {
-      @apply h-1 hover:bg-primary;
+      @apply h-1 mt-1;
+    }
+
+    &:hover{
+      .menu--select {
+        @apply bg-primary;
+      }
     }
 
   }
