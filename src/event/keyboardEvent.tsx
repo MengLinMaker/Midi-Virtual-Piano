@@ -1,7 +1,7 @@
 import { fromEvent, Observable } from "rxjs";
 
 
-
+// Singleton class for keyboardEvent with one way data
 class keyboardEventClass {
   static #instantiated:boolean = false
 
@@ -14,12 +14,12 @@ class keyboardEventClass {
   // create event listeners for keyboard
   constructor() {
     if (keyboardEventClass.#instantiated) {
-      throw "keyboardEvent class already instantiated"
+      throw "KeyboardEvent class already instantiated"
     }
     keyboardEventClass.#instantiated = true
 
-    this.#keydownEvent = fromEvent(document, "keydown");
-    this.#keyupEvent = fromEvent(document, "keyup");
+    this.#keydownEvent = fromEvent(document, "keydown")
+    this.#keyupEvent = fromEvent(document, "keyup")
 
     this.#keydownEvent.subscribe(this.#keydownEventHandle.bind(this))
     this.#keyupEvent.subscribe(this.#keyupEventHandle.bind(this))
@@ -27,14 +27,14 @@ class keyboardEventClass {
 
   #keydownEventHandle(e:any) {
     if (this.#keyCodePressed[e.keyCode] == false) {
-      this.#setKeyboardState(e)
       this.#keyCodePressed[e.keyCode] = true
+      this.#setKeyboardState(e)
     }
   }
 
   #keyupEventHandle(e:any) {
-    this.#setKeyboardState(e)
     this.#keyCodePressed[e.keyCode] = false
+    this.#setKeyboardState(e)
   }
 
   #setKeyboardState(e:any) {
@@ -44,6 +44,7 @@ class keyboardEventClass {
       timeStamp: e.timeStamp,
       type: e.type,
     }
+    console.log(this.getkeyCodePressed())
   }
 
   getkeyCodePressed() {

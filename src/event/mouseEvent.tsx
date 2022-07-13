@@ -1,8 +1,10 @@
 import { fromEvent, Observable } from "rxjs";
-
+import { throttleTime } from 'rxjs/operators';
 
 
 class MouseEventClass {
+  static #instantiated:boolean = false
+
   #mouseState:any
 
   #moveEvent:any
@@ -11,9 +13,13 @@ class MouseEventClass {
 
   // create event listeners for mouse
   constructor() {
-    this.#moveEvent = fromEvent(document, "mousemove");
-    this.#downEvent = fromEvent(document, "mousedown");
-    this.#upEvent = fromEvent(document, "mouseup");
+    if (MouseEventClass.#instantiated) {
+      throw "MouseEvent class already instantiated"
+    }
+    MouseEventClass.#instantiated = true
+    this.#moveEvent = fromEvent(document, "mousemove").pipe(throttleTime(16))
+    this.#downEvent = fromEvent(document, "mousedown").pipe(throttleTime(16))
+    this.#upEvent = fromEvent(document, "mouseup").pipe(throttleTime(16))
 
     this.#moveEvent.subscribe(this.#setMouseState.bind(this))
     this.#downEvent.subscribe(this.#setMouseState.bind(this))
