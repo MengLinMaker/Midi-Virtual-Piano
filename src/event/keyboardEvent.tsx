@@ -44,7 +44,6 @@ class keyboardEventClass {
       timeStamp: e.timeStamp,
       type: e.type,
     }
-    console.log(this.getkeyCodePressed())
   }
 
   getkeyCodePressed() {

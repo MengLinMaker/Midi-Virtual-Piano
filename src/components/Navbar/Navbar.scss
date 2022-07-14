@@ -3,12 +3,12 @@
 .nav {
   @apply absolute z-20   bottom-0   w-full;
   @apply px-2   flex   justify-center;
-  @apply bg-light_bg   text-light_txt;
-  @apply dark:bg-dark_bg   dark:text-dark_txt;
+  @apply bg-white   text-gray-900;
+  box-shadow: 0 0 5px #00000044;
 
   .nav--menu {
     @apply relative w-24   text-center;
-    @apply bg-light_bg   hover:brightness-95;
+    @apply bg-white   hover:bg-gray-100;
     @apply text-xs pt-2;
 
     .menu--icon {
@@ -21,7 +21,7 @@
 
     &:hover{
       .menu--select {
-        @apply bg-primary;
+        @apply bg-rose-400;
       }
     }
 

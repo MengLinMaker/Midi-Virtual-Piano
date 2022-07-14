@@ -3,7 +3,6 @@ import './UtilCursor.scss'
 import { cursorMove, cursorDown, cursorUp } from './functions'
 
 import mouseEvent from '../../event/mouseEvent'
-import keyboardEvent from '../../event/keyboardEvent'
 
 
 

@@ -9,14 +9,6 @@ module.exports = {
       fontFamily: {
         'outfit': ['Outfit', 'sans-serif'] 
       },
-      colors:{
-        primary: '#FF8888',
-        secondary: '#ffc388',
-        light_bg: '#FFFFFF',
-        dark_bg: '#020402',
-        light_txt: '#020402',
-        dark_txt: '#FFFFFF',
-      },
     },
   },
   plugins: [],
