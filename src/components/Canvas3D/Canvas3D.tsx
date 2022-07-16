@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import './Canvas3D.scss'
 import { UtilCursor } from '../../components'
 import { KeyLight, FillLight, RimLight } from './Scene/Light'
-import Keyboard from './Instrument/Keyboard'
+import Keyboard from './Keyboard/Keyboard'
 
 
 
