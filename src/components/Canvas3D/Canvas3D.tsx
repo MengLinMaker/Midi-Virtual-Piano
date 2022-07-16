@@ -16,7 +16,7 @@ export default function Canvas3D() {
       <Canvas>
         <PerspectiveCamera makeDefault fov={75} position={[0,5,5]} />
         <OrbitControls/>
-        <spotLight brightness={100} position={[0,0,-10]}/>
+        <spotLight position={[0,0,-10]}/>
         <FillLight brightness={5} color={"#bdefff"} />
         <RimLight brightness={100} color={"#fff"} />
         <KeyLight brightness={10} color={"#ffc9f9"} />

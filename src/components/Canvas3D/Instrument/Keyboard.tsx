@@ -1,11 +1,12 @@
+// @ts-nocheck
+
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
 import { useEffect, useRef, useState } from 'react'
 import { useSpring } from '@react-spring/core'
 import keyboardEvent from '../../../event/keyboardEvent'
 import { animated } from '@react-spring/three'
-import mouseEvent from '../../../event/mouseEvent'
-const pianoModel:string = '../../../assets/3D/keyboard/keyboard.glb'
+import { ThreeEvent } from '@react-three/fiber'
+import pianoModel from '../../../assets/3D/keyboard/keyboard.glb?url'
 
 
 
@@ -22,7 +23,6 @@ export default function Keyboard() {
     <WhiteKey key={i} position={[3*i,0,0]} keyMaterial={keyMaterial}/>
   )
 
-console.log(keys)
   return (
     <group scale={0.1}>
       <BlackKey position={[0,0,0]}  keyMaterial={keyMaterial}/>
@@ -63,7 +63,7 @@ function WhiteKey({ keyMaterial, position }:any) {
       rotation-x={rotation}
       castShadow
 
-      onPointerDown={(e) => {
+      onPointerDown={(e:ThreeEvent<PointerEvent>) => {
         setActive(Number(1))
         e.stopPropagation()
       }}

@@ -15,8 +15,6 @@ export function KeyLight({ brightness, color }:any) {
       color={color}
       intensity={brightness}
       position={[-2, 0, 5]}
-      lookAt={[0, 0, 0]}
-      penumbra={1}
       castShadow
     />
   )
@@ -32,8 +30,6 @@ export function FillLight({ brightness, color }:any) {
       intensity={brightness}
       color={color}
       position={[2, 1, 4]}
-      lookAt={[0, 0, 0]}
-      penumbra={2}
       castShadow
     />
   )
