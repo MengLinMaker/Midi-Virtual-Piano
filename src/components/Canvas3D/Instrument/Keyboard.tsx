@@ -18,13 +18,13 @@ export default function Keyboard() {
     clearcoatRoughness: 0.25,
   }
 
-  const pos= [...Array(1).keys()]
+  const pos= [...Array(52).keys()]
   const keys = pos.map((i)=>
-    <WhiteKey key={i} position={[3*i,0,0]} keyMaterial={keyMaterial}/>
+    <WhiteKey key={i} position={[0.025*i,0,0]} keyMaterial={keyMaterial}/>
   )
 
   return (
-    <group scale={0.1}>
+    <group scale={10}>
       <BlackKey position={[0,0,0]}  keyMaterial={keyMaterial}/>
       {keys}
     </group>
@@ -55,11 +55,20 @@ function WhiteKey({ keyMaterial, position }:any) {
     }
   },[])
   
+
+  function mouseKeyOff() {
+    if (keyboardEvent.getKeyboardState() == false) {
+      setActive(Number(0))
+    } else if (keyboardEvent.getKeyboardState().type!='keydown'){
+      setActive(Number(0))
+    }
+  }
+
   return (
     <animated.mesh
       ref={keyRef}
       position={position}
-      geometry={model.nodes.key21.geometry}
+      geometry={model.nodes.WhiteKey.geometry}
       rotation-x={rotation}
       castShadow
 
@@ -67,13 +76,8 @@ function WhiteKey({ keyMaterial, position }:any) {
         setActive(Number(1))
         e.stopPropagation()
       }}
-      onPointerUp={()=>{
-        if (keyboardEvent.getKeyboardState() == false) {
-          setActive(Number(0))
-        } else if (keyboardEvent.getKeyboardState().type!='keydown'){
-          setActive(Number(0))
-        }
-      }}
+      onPointerUp={mouseKeyOff}
+      onPointerLeave={mouseKeyOff}
     >
       <animated.meshPhysicalMaterial color={color} {...keyMaterial}/>
     </animated.mesh>
@@ -84,9 +88,10 @@ function WhiteKey({ keyMaterial, position }:any) {
 
 function BlackKey({ keyMaterial, position }:any) {
   const model:any = useGLTF(pianoModel)
+  console.log(model)
   
   return (
-    <mesh position={position} geometry={model.nodes.key22.geometry} castShadow> 
+    <mesh position={position} geometry={model.nodes.BlackKey.geometry} castShadow> 
       <meshPhysicalMaterial color={'#111111'} {...keyMaterial} />
     </mesh>
   )
