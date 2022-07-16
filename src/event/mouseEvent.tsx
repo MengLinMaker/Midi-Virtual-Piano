@@ -1,4 +1,4 @@
-import { fromEvent, Observable } from "rxjs";
+import { fromEvent } from "rxjs";
 import { throttleTime } from 'rxjs/operators';
 
 
@@ -17,9 +17,10 @@ class MouseEventClass {
       throw "MouseEvent class already instantiated"
     }
     MouseEventClass.#instantiated = true
-    this.#moveEvent = fromEvent(document, "mousemove").pipe(throttleTime(16))
-    this.#downEvent = fromEvent(document, "mousedown").pipe(throttleTime(16))
-    this.#upEvent = fromEvent(document, "mouseup").pipe(throttleTime(16))
+    const throttle = 10;
+    this.#moveEvent = fromEvent(document, "mousemove").pipe(throttleTime(throttle))
+    this.#downEvent = fromEvent(document, "mousedown").pipe(throttleTime(throttle))
+    this.#upEvent = fromEvent(document, "mouseup").pipe(throttleTime(throttle))
 
     this.#moveEvent.subscribe(this.#setMouseState.bind(this))
     this.#downEvent.subscribe(this.#setMouseState.bind(this))
@@ -45,15 +46,15 @@ class MouseEventClass {
   }
 
   // Making event susbcribers
-  moveEventSubscribe(eventhandle:any) {
+  moveEventSubscribe(eventhandle:Function) {
     return this.#moveEvent.subscribe(eventhandle)
   }
 
-  downEventSubscribe(eventhandle:any) {
+  downEventSubscribe(eventhandle:Function) {
     return this.#downEvent.subscribe(eventhandle)
   }
 
-  upEventSubscribe(eventhandle:any) {
+  upEventSubscribe(eventhandle:Function) {
     return this.#upEvent.subscribe(eventhandle)
   }
 }

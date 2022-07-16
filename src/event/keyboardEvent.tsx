@@ -1,15 +1,15 @@
-import { fromEvent, Observable } from "rxjs";
+import { fromEvent } from "rxjs";
 
 
 // Singleton class for keyboardEvent with one way data
 class keyboardEventClass {
   static #instantiated:boolean = false
 
-  #keyboardState:any
+  #keyboardState:any = false
   #keyCodePressed:boolean[] = new Array(255).fill(false)
 
-  #keydownEvent:Observable<Event>
-  #keyupEvent:Observable<Event>
+  #keydownEvent:any
+  #keyupEvent:any
 
   // create event listeners for keyboard
   constructor() {
@@ -25,19 +25,19 @@ class keyboardEventClass {
     this.#keyupEvent.subscribe(this.#keyupEventHandle.bind(this))
   }
 
-  #keydownEventHandle(e:any) {
+  #keydownEventHandle(e:KeyboardEvent) {
     if (this.#keyCodePressed[e.keyCode] == false) {
-      this.#keyCodePressed[e.keyCode] = true
       this.#setKeyboardState(e)
+      this.#keyCodePressed[e.keyCode] = true
     }
   }
 
-  #keyupEventHandle(e:any) {
-    this.#keyCodePressed[e.keyCode] = false
+  #keyupEventHandle(e:KeyboardEvent) {
     this.#setKeyboardState(e)
+    this.#keyCodePressed[e.keyCode] = false
   }
 
-  #setKeyboardState(e:any) {
+  #setKeyboardState(e:KeyboardEvent) {
     this.#keyboardState = {
       key: e.key,
       keyCode: e.keyCode,
@@ -50,16 +50,20 @@ class keyboardEventClass {
     return this.#keyCodePressed.flatMap((keyPressed, keyCode) => keyPressed ? keyCode : [])
   }
 
+  getkeyCodePressedRaw() {
+    return this.#keyCodePressed
+  }
+
   getKeyboardState() {
     return this.#keyboardState
   }
 
   // Making event susbcribers
-  downEventSubscribe(eventhandle:any) {
+  downEventSubscribe(eventhandle:Function) {
     return this.#keydownEvent.subscribe(eventhandle)
   }
 
-  upEventSubscribe(eventhandle:any) {
+  upEventSubscribe(eventhandle:Function) {
     return this.#keyupEvent.subscribe(eventhandle)
   }
 }

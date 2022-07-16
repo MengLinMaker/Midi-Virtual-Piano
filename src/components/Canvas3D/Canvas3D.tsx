@@ -1,9 +1,12 @@
-import { useRef, useState } from 'react'
-import { OrbitControls } from '@react-three/drei'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 
 import './Canvas3D.scss'
 import { UtilCursor } from '../../components'
+import { KeyLight, FillLight, RimLight } from './Scene/Light'
+import Keyboard from './Instrument/Keyboard'
+
+
 
 export default function Canvas3D() {
 
@@ -11,37 +14,16 @@ export default function Canvas3D() {
     <section id="3Dcanvas" className='visualiser'>
       <UtilCursor/>
       <Canvas>
+        <PerspectiveCamera makeDefault fov={75} position={[0,5,5]} />
         <OrbitControls/>
-        <ambientLight/>
-        <pointLight position={[10, 10, 10]}/>
-        <Box position={[-1.2, 0, 0]}/>
-        <Box position={[1.2, 0, 0]}/>
+        <spotLight brightness={100} position={[0,0,-10]}/>
+        <FillLight brightness={5} color={"#bdefff"} />
+        <RimLight brightness={100} color={"#fff"} />
+        <KeyLight brightness={10} color={"#ffc9f9"} />
+
+        <Keyboard/>
+
       </Canvas>
     </section>
-  )
-}
-
-
-
-function Box(props:any) {
-  // This reference will give us direct access to the mesh
-  const mesh:any = useRef()
-  // Set up state for the hovered and active state
-  const [hovered, setHover] = useState(false)
-  const [active, setActive] = useState(false)
-  // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
-  // Return view, these are regular three.js elements expressed in JSX
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-    </mesh>
   )
 }
