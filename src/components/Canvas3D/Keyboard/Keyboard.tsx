@@ -4,6 +4,7 @@ import Key from './Key'
 import Chasis from './Chasis'
 
 
+
 export default function Keyboard() {
   const { nodes }:any = useGLTF(pianoModel)
   const keyMaterial:object = {
@@ -26,8 +27,6 @@ export default function Keyboard() {
   }
   const whiteKeyDist:number = 0.025
 
-// @ts-nocheck
-
   const whitekeys = [...Array(52).keys()].map((i)=>
     <Key key={i} material={keyMaterial} position={[whiteKeyDist*i,0,0]} 
     model={nodes.WhiteKey} colors={[color.white,color.active]}/>
@@ -37,7 +36,6 @@ export default function Keyboard() {
     <Key key={i}  material={keyMaterial} position={[whiteKeyDist*(i+0.5),0,0]} 
     model={nodes.BlackKey} colors={[color.black,color.active]}/>
   )
-
 
   return (
     <group position={[-26*whiteKeyDist,0,0]} scale={1}>
