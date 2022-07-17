@@ -1,28 +1,23 @@
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
 import './Canvas3D.scss'
 import { UtilCursor } from '../../components'
-import { KeyLight, FillLight, RimLight } from './Scene/Light'
 import Keyboard from './Keyboard/Keyboard'
-
-
+import Lighting from './Scene/Lighting'
+import Camera from './Scene/Camera'
+import Background from './Scene/Background'
+import { Stats } from '@react-three/drei'
 
 export default function Canvas3D() {
-
   return (
     <section id="3Dcanvas" className='visualiser'>
       <UtilCursor/>
-      <Canvas>
-        <PerspectiveCamera makeDefault fov={75} position={[0,5,5]} />
-        <OrbitControls/>
-        <spotLight position={[0,0,-10]}/>
-        <FillLight brightness={5} color={"#bdefff"} />
-        <RimLight brightness={100} color={"#fff"} />
-        <KeyLight brightness={10} color={"#ffc9f9"} />
-
+      <Canvas style={{background: 'white'}}>
+        <Stats/>
+        <Camera/>
+        <Lighting/>
+        <Background/>
         <Keyboard/>
-
       </Canvas>
     </section>
   )

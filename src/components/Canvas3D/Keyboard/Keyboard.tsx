@@ -4,26 +4,27 @@ import Key from './Key'
 import Chasis from './Chasis'
 
 
-
 export default function Keyboard() {
   const { nodes }:any = useGLTF(pianoModel)
   const keyMaterial:object = {
-    specularIntensity: 1,
-    clearcoat: 1,
-    clearcoatRoughness: 0.25,
+    specularIntensity: 3,
+    clearcoat: 0.8,
+    clearcoatRoughness: 0.3,
+    reflectivity: 0.5,
   }
   const ChasisMaterial:object = {
     specularIntensity: 1,
-    clearcoat: 1,
-    clearcoatRoughness: 0.25,
+    clearcoat: 0.55,
+    clearcoatRoughness: 0.3,
+    reflectivity: 0.5,
   }
   const color = {
     black: '#111111',
-    white: '#ffffff',
-    chasis: '#ff8888',
-    active: '#ff8888',
+    white: '#FEFEFF',
+    chasis: '#FE654F',
+    active: '#FE654F',
   }
-  const whiteKeyDist = 0.025
+  const whiteKeyDist:number = 0.025
 
 // @ts-nocheck
 

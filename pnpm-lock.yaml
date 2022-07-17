@@ -5,6 +5,7 @@ specifiers:
   '@react-spring/three': ^9.5.0
   '@react-three/drei': ^9.17.1
   '@react-three/fiber': ^8.2.0
+  '@react-three/postprocessing': ^2.4.6
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@types/three': ^0.141.0
@@ -24,6 +25,7 @@ dependencies:
   '@react-spring/three': 9.5.0_noqc5hrtllbymtk7u4tau3xafa
   '@react-three/drei': 9.17.1_qjhrljb2mtzgjxqgwzxrcgr5me
   '@react-three/fiber': 8.2.0_5kidazjkmgjhxqotnaqokpbepa
+  '@react-three/postprocessing': 2.4.6_noqc5hrtllbymtk7u4tau3xafa
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   rxjs: 7.5.6
@@ -525,6 +527,22 @@ packages:
       suspend-react: 0.0.8_react@18.2.0
       three: 0.142.0
       zustand: 3.7.2_react@18.2.0
+    dev: false
+
+  /@react-three/postprocessing/2.4.6_noqc5hrtllbymtk7u4tau3xafa:
+    resolution: {integrity: sha512-LxCCtBamNT5uHN8Y1K5ec7ZqdmcIEoWUTWW0ujofX9kode5htk0E2zl8onSXMvRaDsOCMzP5EK3MycLXWgGFuA==}
+    peerDependencies:
+      '@react-three/fiber': '>=7.0'
+      react: '>=17.0'
+      three: '>=0.136.0'
+    dependencies:
+      '@react-three/fiber': 8.2.0_5kidazjkmgjhxqotnaqokpbepa
+      postprocessing: 6.28.3_three@0.142.0
+      react: 18.2.0
+      react-merge-refs: 1.1.0
+      screen-space-reflections: 1.0.8_ruh7gsjz65ppbhfuvjl3tje524
+      three: 0.142.0
+      three-stdlib: 2.12.1_three@0.142.0
     dev: false
 
   /@rollup/pluginutils/4.2.1:
@@ -1417,6 +1435,15 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postprocessing/6.28.3_three@0.142.0:
+    resolution: {integrity: sha512-Y3VzV2pa+EJlzXOFyNTV/6htDQsHdhhYhpALyfv/9fk9H+GbUR/Zw2wjpZO1JWqO1x/nYbhmZficwvVk981EEw==}
+    engines: {node: '>= 0.13.2'}
+    peerDependencies:
+      three: '>= 0.107.0 < 0.143.0'
+    dependencies:
+      three: 0.142.0
+    dev: false
+
   /potpack/1.0.2:
     resolution: {integrity: sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==}
     dev: false
@@ -1593,6 +1620,16 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /screen-space-reflections/1.0.8_ruh7gsjz65ppbhfuvjl3tje524:
+    resolution: {integrity: sha512-UBahDIY3TBds7RIkiGmBMQLZKjBYuAdatOBHEs8jpkSe414cJ66nKNPh/cBFL7ZekTorluNbmxdbJ1GEw/e8xQ==}
+    peerDependencies:
+      postprocessing: ^6.28.0
+      three: ^0.141.0
+    dependencies:
+      postprocessing: 6.28.3_three@0.142.0
+      three: 0.142.0
     dev: false
 
   /semver/6.3.0:

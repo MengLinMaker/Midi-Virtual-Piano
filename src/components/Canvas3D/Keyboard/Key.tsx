@@ -38,7 +38,7 @@ export default function Key({ material, position, model, colors }:any) {
 
   return (
     <animated.mesh ref={keyRef} position={position} geometry={model.geometry}
-      rotation-x={rotation} castShadow
+      rotation-x={rotation} castShadow={true}
       onPointerDown={(e:ThreeEvent<PointerEvent>) => {
         setActive(Number(1))
         e.stopPropagation()
