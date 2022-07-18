@@ -1,4 +1,4 @@
-import { fromEvent } from "rxjs";
+import { delay, fromEvent } from "rxjs";
 
 
 // Singleton class for keyboardEvent with one way data
@@ -23,13 +23,15 @@ class keyboardEventClass {
 
     this.#keydownEvent.subscribe(this.#keydownEventHandle.bind(this))
     this.#keyupEvent.subscribe(this.#keyupEventHandle.bind(this))
+
+    //this.#keydownEvent = this.#keydownEvent.pipe(delay(1))
+    //this.#keyupEvent = this.#keyupEvent.pipe(delay(1))
   }
 
   #keydownEventHandle(e:KeyboardEvent) {
-    if (this.#keyCodePressed[e.keyCode] == false) {
-      this.#setKeyboardState(e)
-      this.#keyCodePressed[e.keyCode] = true
-    }
+    if (e.repeat) {return}
+    this.#setKeyboardState(e)
+    this.#keyCodePressed[e.keyCode] = true
   }
 
   #keyupEventHandle(e:KeyboardEvent) {
