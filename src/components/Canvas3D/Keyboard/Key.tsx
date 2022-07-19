@@ -2,10 +2,11 @@
 
 import { forwardRef, useEffect, useState } from 'react'
 import { useSpring } from '@react-spring/core'
-import keyboardEvent from '../../../event/keyboardEvent'
 import { animated } from '@react-spring/three'
 import { ThreeEvent } from '@react-three/fiber'
 import { delay } from 'underscore'
+
+import keyboardEvent from '../../../event/keyboardEvent'
 
 
 
@@ -54,7 +55,7 @@ const Key = forwardRef( (props:any, ref) => {
 
   return (
     <animated.mesh position={position} geometry={model.geometry}
-      rotation-x={rotation} castShadow={true}
+      rotation-x={rotation} castShadow receiveShadow
       onPointerDown={(e:ThreeEvent<PointerEvent>) => {
         setActive(1), setMidiPlay(midiCode,true)
         e.stopPropagation()

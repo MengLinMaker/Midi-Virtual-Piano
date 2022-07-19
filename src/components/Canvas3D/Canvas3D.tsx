@@ -1,18 +1,18 @@
 import { Canvas } from '@react-three/fiber'
+import { Stats } from '@react-three/drei'
 
 import './Canvas3D.scss'
 import { UtilCursor } from '../../components'
+import { Background, Camera, Lighting } from './Scene'
 import Keyboard from './Keyboard/Keyboard'
-import Lighting from './Scene/Lighting'
-import Camera from './Scene/Camera'
-import Background from './Scene/Background'
-import { Stats } from '@react-three/drei'
+
+
 
 export default function Canvas3D() {
   return (
     <section id="3Dcanvas" className='visualiser'>
       <UtilCursor/>
-      <Canvas style={{background: 'white'}}>
+      <Canvas shadows={false} style={{background: 'white'}}>
         <Stats/>
         <Camera/>
         <Lighting/>
