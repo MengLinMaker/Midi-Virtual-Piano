@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <Canvas3D/>
-      <Navbar/>
     </>
   )
 }

@@ -13,7 +13,7 @@ export default function Canvas3D() {
     <section id="3Dcanvas" className='visualiser'>
       <UtilCursor/>
       <Canvas shadows={false} style={{background: 'white'}}>
-        <Stats/>
+        <Stats showPanel={-1}/>
         <Camera/>
         <Lighting/>
         <Background/>

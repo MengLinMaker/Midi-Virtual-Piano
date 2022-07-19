@@ -2,7 +2,7 @@ import _ from 'underscore'
 
 
 
-export const keycodeDict = {
+export const keyCodeDict = {
   'backspace': 8,
   'tab': 9,
 
@@ -94,4 +94,4 @@ export const keycodeDict = {
   "'": 222,
 }
 
-export const keycodeDictReverse = _.invert(keycodeDict)
+export const keyCodeDictReverse = _.invert(keyCodeDict)

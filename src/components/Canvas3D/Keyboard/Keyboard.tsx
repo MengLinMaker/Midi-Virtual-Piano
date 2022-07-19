@@ -6,6 +6,7 @@ import Chasis from './Chasis'
 import keyboardEvent from '../../../event/keyboardEvent'
 import pianoModel from '../../../assets/3D/keyboard/keyboard.glb?url'
 import generateKeyDist from './functions/generateKeyDist'
+import keyCodeToMidiCode from './functions/keyCodeToKeyID'
 
 
 
@@ -47,14 +48,15 @@ export default function Keyboard() {
     keysPressed.current[midiCode] = state
   }
 
-  function handle(e:KeyboardEvent){
+  function handle(e:KeyboardEvent, state:boolean){
     if (e.repeat) {return}
-    keysPressed.current = keyboardEvent.getkeyCodePressedRaw()
+    const midiCode = keyCodeToMidiCode(e.keyCode)
+    if (midiCode >= 0) keysPressed.current[midiCode] = state
   }
 
   useEffect(()=>{
-    const keyDown = keyboardEvent.downEventSubscribe(handle)
-    const keyUp = keyboardEvent.upEventSubscribe(handle)
+    const keyDown = keyboardEvent.downEventSubscribe((e:KeyboardEvent)=>handle(e,true))
+    const keyUp = keyboardEvent.upEventSubscribe((e:KeyboardEvent)=>handle(e,false))
     return ()=>{
       keyDown.unsubscribe()
       keyUp.unsubscribe()
@@ -72,7 +74,7 @@ export default function Keyboard() {
       {[...Array(numberOfKeys).keys()].map((i)=>
 
       <Key key={i} ref={keysPressed} setMidiPlay={setMidiPlay} material={keyMaterial}
-        midiCode={midiCodeLowest + i}  
+        midiCode={midiCodeLowest + i}
         position={[keyOffset[i],0,0]} 
         model={keyType[i] ? nodes.WhiteKey : nodes.BlackKey}
         colors={[keyType[i] ? color.white : color.black ,color.active]}/>
