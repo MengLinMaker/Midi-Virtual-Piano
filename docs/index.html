@@ -9,35 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index.eded81d5.js"></script>
+    <script type="module" crossorigin src="/assets/index.f7da2083.js"></script>
     <link rel="stylesheet" href="/assets/index.da8aed04.css">
   </head>
   <body>
     <div id="root"></div>
     
-    <script>
-      (function () {
-        const cohorts = "interestCohort";
-        const documentProto = Document.prototype;
-        const flocSupported = cohorts in documentProto;
-
-        if (!flocSupported) {
-          return;
-        }
-
-        const descriptor = Object.getOwnPropertyDescriptor(documentProto, cohorts);
-        const writable = descriptor && descriptor.writable;
-        if (writable) {
-          const proxy = new Proxy(documentProto[cohorts], { apply: () => Promise.reject() });
-          const config = {
-            writable: false,
-            value: proxy,
-            configurable: false,
-            enumerable: false,
-          };
-          Object.defineProperty(documentProto, cohorts, config);
-        }
-      })();
-    </script>
   </body>
 </html>
