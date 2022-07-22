@@ -1,7 +1,7 @@
 import { useRef, useEffect, MutableRefObject } from 'react'
+
 import './UtilCursor.scss'
 import { cursorMove, cursorDown, cursorUp } from './functions'
-
 import mouseEvent from '../../event/mouseEvent'
 
 
