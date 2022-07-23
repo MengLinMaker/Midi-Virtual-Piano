@@ -52,7 +52,7 @@ Code inspirations and dependencies
 * [iBundi - Open-Web-Piano](https://github.com/iBundin/Open-Web-Piano)
 
 <div align="center">
-  <img width="500" src="https://user-images.githubusercontent.com/39476147/180584949-09eddf65-ad55-429e-9b46-54ea6b6c7d22.gif">
+  <img content="width=device-width, initial-scale=1.0, minimum-scale=0.5" src="https://user-images.githubusercontent.com/39476147/180584949-09eddf65-ad55-429e-9b46-54ea6b6c7d22.gif">
 </div>
 
 
