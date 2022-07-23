@@ -41,7 +41,6 @@
 <img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-spring/core">
 <img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/rxjs">
 <img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/underscore">
-<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/vite">
 </div>
 
 Code inspirations and dependencies
