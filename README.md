@@ -14,6 +14,16 @@
  </a>
 </h1>
 
+<div flex align="center">
+<img src="https://img.shields.io/github/license/menglinmaker/Midi-Virtual-Piano">
+<img src="https://img.shields.io/github/workflow/status/menglinmaker/Midi-Virtual-Piano/Continuous Integration">
+<img src="https://img.shields.io/netlify/d23c021c-8dc4-45eb-8111-ede377c50326">
+<img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=success&up_message=online&url=https://menglinmaker-midi-virtual-piano.netlify.app/">
+</div>
+
+
+
+
 ## Play a song
 * **Press a key** - :computer_mouse: Left/Right Click
 * **Use you keyboard** - :keyboard: Press
@@ -23,6 +33,17 @@
 * **Drag** - :computer_mouse:	Right Click
 
 ## Credit
+
+<div flex align="center">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/react">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/fiber">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/drei">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-spring/core">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/rxjs">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/underscore">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/vite">
+</div>
+
 Code inspirations and dependencies
 * [Meta - React](https://reactjs.org/)
 * [vitejs - vite](https://github.com/vitejs/vite)
