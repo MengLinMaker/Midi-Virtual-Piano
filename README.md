@@ -1,17 +1,62 @@
-# Midi Virtual Piano
-Creating a virtual piano video should be easy and fast. Skip tedious rendering and editing setups and have all the functionality in one place!
+<h1 align="center">
+ Create beautiful virtual piano videos!
+</h1>
 
-## Instructions
+<div align="center">
+  <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
+    <img width="100%" src="https://user-images.githubusercontent.com/39476147/180583827-fedcb6ce-e4b0-46ad-99b0-ca66c572d504.gif">
+  </a>
+</div>
+
+<h1 align="center">
+ <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
+ :point_right: Live Demo :point_left:
+ </a>
+</h1>
+
+<div flex align="center">
+<img alt="GitHub" src="https://img.shields.io/github/license/menglinmaker/Midi-Virtual-Piano?style=flat-square">
+<img src="https://img.shields.io/github/languages/code-size/menglinmaker/Midi-Virtual-Piano?style=flat-square">
+<img src="https://img.shields.io/github/workflow/status/menglinmaker/Midi-Virtual-Piano/Continuous Integration?style=flat-square">
+<img src="https://img.shields.io/netlify/d23c021c-8dc4-45eb-8111-ede377c50326?style=flat-square">
+<img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=success&up_message=online&url=https://menglinmaker-midi-virtual-piano.netlify.app/&style=flat-square">
+</div>
 
 
 
 
+## Play a song
+* **Press a key** - :computer_mouse: Left/Right Click
+* **Use you keyboard** - :keyboard: Press
 
-<pre>
+## Navigate scene
+* **Rotate** - :computer_mouse: Left Click
+* **Drag** - :computer_mouse:	Right Click
+
+## Credit
+
+<div flex align="center">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/react?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/fiber?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/drei?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-spring/core?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/rxjs?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/underscore?style=flat-square">
+</div>
+
+Code inspirations and dependencies
+* [Meta - React](https://reactjs.org/)
+* [vitejs - vite](https://github.com/vitejs/vite)
+* [pmndrs - react-three-fiber](https://github.com/pmndrs/react-three-fiber)
+* [pmndrs - react-spring](https://github.com/pmndrs/react-spring)
+* [iBundi - Open-Web-Piano](https://github.com/iBundin/Open-Web-Piano)
+
+<div align="center">
+  <img content="width=device-width, initial-scale=1.0, minimum-scale=0.5" src="https://user-images.githubusercontent.com/39476147/180584949-09eddf65-ad55-429e-9b46-54ea6b6c7d22.gif">
+</div>
 
 
 
-</pre>
 
 # Design process
 
@@ -49,14 +94,3 @@ Creating a virtual piano video should be easy and fast. Skip tedious rendering a
 * Myself - MengLinMaker is a user
 * MusicalBasics Discord
 * Musescore community
-
-
-
-
-<pre>
-
-
-
-</pre>
-
-# Development process
