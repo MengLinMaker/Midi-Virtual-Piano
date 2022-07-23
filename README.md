@@ -8,11 +8,11 @@
   </a>
 </div>
 
-<h2 align="center">
+<h1 align="center">
  <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
  :point_right: Live Demo :point_left:
  </a>
-</h2>
+</h1>
 
 ## Play a song
 * **Press a key** - :computer_mouse: Left/Right Click
