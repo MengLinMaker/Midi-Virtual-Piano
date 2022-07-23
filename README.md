@@ -16,6 +16,7 @@
 
 <div flex align="center">
 <img src="https://img.shields.io/github/license/menglinmaker/Midi-Virtual-Piano">
+<img src="https://img.shields.io/github/languages/code-size/menglinmaker/Midi-Virtual-Piano">
 <img src="https://img.shields.io/github/workflow/status/menglinmaker/Midi-Virtual-Piano/Continuous Integration">
 <img src="https://img.shields.io/netlify/d23c021c-8dc4-45eb-8111-ede377c50326">
 <img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=success&up_message=online&url=https://menglinmaker-midi-virtual-piano.netlify.app/">
