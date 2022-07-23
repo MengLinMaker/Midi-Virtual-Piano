@@ -15,11 +15,11 @@
 </h1>
 
 <div flex align="center">
-<img src="https://img.shields.io/github/license/menglinmaker/Midi-Virtual-Piano">
-<img src="https://img.shields.io/github/languages/code-size/menglinmaker/Midi-Virtual-Piano">
-<img src="https://img.shields.io/github/workflow/status/menglinmaker/Midi-Virtual-Piano/Continuous Integration">
-<img src="https://img.shields.io/netlify/d23c021c-8dc4-45eb-8111-ede377c50326">
-<img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=success&up_message=online&url=https://menglinmaker-midi-virtual-piano.netlify.app/">
+<img alt="GitHub" src="https://img.shields.io/github/license/menglinmaker/Midi-Virtual-Piano?style=flat-square">
+<img src="https://img.shields.io/github/languages/code-size/menglinmaker/Midi-Virtual-Piano?style=flat-square">
+<img src="https://img.shields.io/github/workflow/status/menglinmaker/Midi-Virtual-Piano/Continuous Integration?style=flat-square">
+<img src="https://img.shields.io/netlify/d23c021c-8dc4-45eb-8111-ede377c50326?style=flat-square">
+<img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=success&up_message=online&url=https://menglinmaker-midi-virtual-piano.netlify.app/&style=flat-square">
 </div>
 
 
@@ -36,12 +36,12 @@
 ## Credit
 
 <div flex align="center">
-<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/react">
-<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/fiber">
-<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/drei">
-<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-spring/core">
-<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/rxjs">
-<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/underscore">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/react?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/fiber?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-three/drei?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/@react-spring/core?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/rxjs?style=flat-square">
+<img src="https://img.shields.io/github/package-json/dependency-version/menglinmaker/Midi-Virtual-Piano/underscore?style=flat-square">
 </div>
 
 Code inspirations and dependencies
