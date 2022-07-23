@@ -23,7 +23,7 @@ export default function UtilCursor() {
 
   return (
     <div ref={cursor} className="utilcursor">
-      <img ref={cursorIcon} className="utilcursor-icon" />
+      <img ref={cursorIcon} className="utilcursor-icon" alt="Cursor icons"/>
     </div>
   )
 }

@@ -18,9 +18,9 @@ class MouseEventClass {
     }
     MouseEventClass.#instantiated = true
     const throttle = 10;
-    this.#moveEvent = fromEvent(document, "mousemove").pipe(throttleTime(throttle))
-    this.#downEvent = fromEvent(document, "mousedown").pipe(throttleTime(throttle))
-    this.#upEvent = fromEvent(document, "mouseup").pipe(throttleTime(throttle))
+    this.#moveEvent = fromEvent(document, "mousemove",{passive: true}).pipe(throttleTime(throttle))
+    this.#downEvent = fromEvent(document, "mousedown",{passive: true}).pipe(throttleTime(throttle))
+    this.#upEvent = fromEvent(document, "mouseup",{passive: true}).pipe(throttleTime(throttle))
 
     this.#moveEvent.subscribe(this.#setMouseState.bind(this))
     this.#downEvent.subscribe(this.#setMouseState.bind(this))

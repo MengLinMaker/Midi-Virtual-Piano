@@ -18,8 +18,8 @@ class keyboardEventClass {
     }
     keyboardEventClass.#instantiated = true
 
-    this.#keydownEvent = fromEvent(document, "keydown")
-    this.#keyupEvent = fromEvent(document, "keyup")
+    this.#keydownEvent = fromEvent(document, "keydown",{passive: true})
+    this.#keyupEvent = fromEvent(document, "keyup",{passive: true})
 
     this.#keydownEvent.subscribe(this.#keydownEventHandle.bind(this))
     this.#keyupEvent.subscribe(this.#keyupEventHandle.bind(this))
