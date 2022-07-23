@@ -14,15 +14,15 @@
  </a>
 </h2>
 
-# Play a song
+## Play a song
 * **Press a key** - :computer_mouse: Left/Right Click
 * **Use you keyboard** - :keyboard: Press
 
-# Navigate scene
+## Navigate scene
 * **Rotate** - :computer_mouse: Left Click
 * **Drag** - :computer_mouse:	Right Click
 
-# Credit
+## Credit
 Code inspirations and dependencies
 * [Meta - React](https://reactjs.org/)
 * [vitejs - vite](https://github.com/vitejs/vite)
