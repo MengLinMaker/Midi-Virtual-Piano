@@ -27,21 +27,6 @@ export default defineConfig({
       registerType: 'autoUpdate',
       devOptions: {
         enabled: true
-      },
-      workbox: {
-        runtimeCaching: [{
-          handler: 'NetworkOnly',
-          urlPattern: /\/api\/.*\/*.json/,
-          method: 'POST',
-          options: {
-            backgroundSync: {
-              name: 'myQueueName',
-              options: {
-                maxRetentionTime: 24 * 60
-              }
-            }
-          }
-        }]
       }
     })
   ]
