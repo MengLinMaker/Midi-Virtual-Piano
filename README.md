@@ -1,8 +1,22 @@
-# Midi Virtual Piano
-Creating a virtual piano video should be easy and fast. Skip tedious rendering and editing setups and have all the functionality in one place!
+<h1 align="center">
+ <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
+ :musical_note: Create beautiful virtual piano videos! :musical_note:
+ </a>
+</h1>
 
-## Instructions
+<div align="center">
+  <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
+    <img width="100%" src="https://user-images.githubusercontent.com/39476147/180583827-fedcb6ce-e4b0-46ad-99b0-ca66c572d504.gif">
+  </a>
+</div>
 
+<h1 align="center">
+ <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
+ :point_right: :point_right: :point_right: Live Demo Here :point_left: :point_left: :point_left:
+ </a>
+</h1>
+
+# Instructions
 
 
 
