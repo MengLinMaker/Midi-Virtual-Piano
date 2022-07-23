@@ -1,7 +1,5 @@
 <h1 align="center">
- <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
- :musical_note: Create beautiful virtual piano videos! :musical_note:
- </a>
+ Create beautiful virtual piano videos!
 </h1>
 
 <div align="center">
@@ -10,22 +8,34 @@
   </a>
 </div>
 
-<h1 align="center">
+<h2 align="center">
  <a href="https://menglinmaker-midi-virtual-piano.netlify.app/">
- :point_right: :point_right: :point_right: Live Demo Here :point_left: :point_left: :point_left:
+ :point_right: Live Demo :point_left:
  </a>
-</h1>
+</h2>
 
-# Instructions
+# Play a song
+* **Press a key** - :computer_mouse: Left/Right Click
+* **Use you keyboard** - :keyboard: Press
+
+# Navigate scene
+* **Rotate** - :computer_mouse: Left Click
+* **Drag** - :computer_mouse:	Right Click
+
+# Credit
+Code inspirations and dependencies
+* [Meta - React](https://reactjs.org/)
+* [vitejs - vite](https://github.com/vitejs/vite)
+* [pmndrs - react-three-fiber](https://github.com/pmndrs/react-three-fiber)
+* [pmndrs - react-spring](https://github.com/pmndrs/react-spring)
+* [iBundi - Open-Web-Piano](https://github.com/iBundin/Open-Web-Piano)
+
+<div align="center">
+  <img width="500" src="https://user-images.githubusercontent.com/39476147/180584949-09eddf65-ad55-429e-9b46-54ea6b6c7d22.gif">
+</div>
 
 
 
-
-<pre>
-
-
-
-</pre>
 
 # Design process
 
@@ -63,14 +73,3 @@
 * Myself - MengLinMaker is a user
 * MusicalBasics Discord
 * Musescore community
-
-
-
-
-<pre>
-
-
-
-</pre>
-
-# Development process
