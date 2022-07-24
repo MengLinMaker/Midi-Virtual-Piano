@@ -84,7 +84,7 @@ By identifying the strengths and weaknesses of existing apps, we can determine w
 | Blender                                       | tremendous control. Quality render.           | Time consuming. Slow render.                           |
 | [Synthesia](https://synthesiagame.com/)       | Easy to use.                                  | Simple looking. Less customisability.               |
 
-**Desirable features: most importand to lease important**
+**Desirable Features: most importand to lease important**
 * Cross platform support - Windows, MacOS, Linux...
 * Quality renders + fluid UI
 * Keyboard and midi playback
@@ -121,4 +121,11 @@ Keyboard keypressed    |    Left mouse click   |    Right mouse click    |
 | :------------------- |:----------------------| :-----------------------|
 | None                 | Rotate                | Drag                    |
 | Ctrl or Shift        | Drag                  | Rotate                  |
+
+## Development Log - 17/07/22
+**Managing EventListeners**
+One of the challenges with managing events on a virtual keyboard is performance and state management. Normally this would not be a challenge in plain javascript. However, react does not allow you to change states easily without rerenders. External state management libraries appear to have the same updating issue. Custom hooks are also too restrictive, since they cannot be used inside another event. The solution that I ended up using was a singleton class with [RXJS](https://rxjs.dev/) with listener suscribers. This allows data to be stored from each event as a history, providing additional information not available from a traditional event listener. The single event listener used will drastically reduce the number of event listeners, increasing performance. This can also be used in a scenario where combo keys are needed. In summary, this behaves like a custom event listener.
+
+**3D Animation With Keyboard Controls**
+Smooth "key" animations with no choppy rerenders can be done using refs and a physics based library: [react-spring](https://react-spring.dev/). A ref from the "chasis" component was required for global state management without rerenders. IDs assigned to each key can be used in some functions to pass the state back up to the "chasis" component. Overall, the result is a fluid, uninterupted animation.
 
