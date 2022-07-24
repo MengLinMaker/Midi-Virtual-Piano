@@ -57,7 +57,7 @@ Code inspirations and dependencies
 
 
 
-# Design process
+# Design process - 03/07/22
 ## The problem
 There are many piano visualisation apps. However, finding a good app has proven to be very difficult and quite a common question. Most visualisers are not 'beautiful' or have good audio quality or none at all. Some apps require payment. Some have a lot of bugs. Some are not cross platform. Ultimately a visualiser can be used to teach and enhance expression.
 
@@ -129,3 +129,9 @@ One of the challenges with managing events on a virtual keyboard is performance 
 **3D Animation With Keyboard Controls**
 Smooth "key" animations with no choppy rerenders can be done using refs and a physics based library: [react-spring](https://react-spring.dev/). A ref from the "chasis" component was required for global state management without rerenders. IDs assigned to each key can be used in some functions to pass the state back up to the "chasis" component. Overall, the result is a fluid, uninterupted animation.
 
+## Development Log - 24/07/22
+**Adding Piano Sound**
+The traditional approach is to add an mp3 for each pitch. This would result in 88 x 200kb mp3, which is incredibly large. I would like to minimise the website size without sacrificing sound quality. The best approach is to use a few sample pitches to generate the missing pitches. I have tried may libraries: React-sound-font, Midi js, Tone js, sound-font. Unfortunately, there are a lot of bugs and legacy code. The final solution was from [iBundi - Open-Web-Piano](https://github.com/iBundin/Open-Web-Piano). This approach minimised 
+
+**Receiving Feedback**
+I have completed of the basic sound, visual and controls for this app. Thus, it is a good idea to recieve feedback. I have posted my app into some Facebook groups, Reddit and Discord groups. Unfortunately, I have not recieved much feedback nor engagement. I have tried using a poll for engagement. I did get a lot of comments about how fun the app was. So in terms of visuals, sound and interactivity, I have succeeded. Ultimately the question I would like to answer is: "would someone use this app over another?"
