@@ -57,7 +57,7 @@ Code inspirations and dependencies
 
 
 
-# Design process - 03/07/22
+# Development Process
 ## The problem
 There are many piano visualisation apps. However, finding a good app has proven to be very difficult and quite a common question. Most visualisers are not 'beautiful' or have good audio quality or none at all. Some apps require payment. Some have a lot of bugs. Some are not cross platform. Ultimately a visualiser can be used to teach and enhance expression.
 
@@ -72,7 +72,7 @@ There are many piano visualisation apps. However, finding a good app has proven 
 * Workflow time reduction
 * Time spent on app compared to competitors
 
-## Research
+## Research - 03/07/22
 By identifying the strengths and weaknesses of existing apps, we can determine which features can enhance the user experience. One area that was lacking was 3D piano visualisations and very nice looking backgrounds. Most are designed to have pure utility in mind with midi visualisation.
 
  Competition                                    | Pros                                          | Cons                                                   |
