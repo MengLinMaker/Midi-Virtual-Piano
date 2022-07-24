@@ -58,9 +58,11 @@ Code inspirations and dependencies
 
 
 # Design process
+## The problem
+There are many piano visualisation apps. However, finding a good app has proven to be very difficult and quite a common question. Most visualisers are not 'beautiful' or have good audio quality or none at all. Some apps require payment. Some have a lot of bugs. Some are not cross platform. Ultimately a visualiser can be used to teach and enhance expression.
 
 ## Aim
-**To create an app that simplifies the video creation workflow for composers. (specifically for piano composers).**
+**To create an app that simplifies the video creation workflow for composers. (specifically for youtube piano composers). User experience is top priority**
 
 **Questions to be answered:**
 * What is the fastest workflow?
@@ -71,6 +73,8 @@ Code inspirations and dependencies
 * Time spent on app compared to competitors
 
 ## Research
+By identifying the strengths and weaknesses of existing apps, we can determine which features can enhance the user experience. One area that was lacking was 3D piano visualisations and very nice looking backgrounds. Most are designed to have pure utility in mind with midi visualisation.
+
  Competition                                    | Pros                                          | Cons                                                   |
 | :-------------------------------------------- |:----------------------------------------------| :------------------------------------------------------|
 | [PianoVFX](https://piano-vfx.com/)            | Quality renders. Basic video editing features.| [Buggy to some users (crashes)](https://www.reddit.com/r/piano/comments/fsqyte/i_made_a_piano_visualizer_free_to_download/). Clunky navigation. No Mac and Linux version.             |
@@ -80,16 +84,41 @@ Code inspirations and dependencies
 | Blender                                       | tremendous control. Quality render.           | Time consuming. Slow render.                           |
 | [Synthesia](https://synthesiagame.com/)       | Easy to use.                                  | Simple looking. Less customisability.               |
 
-**Desirable features:**
+**Desirable features: most importand to lease important**
 * Cross platform support - Windows, MacOS, Linux...
-* Quality renders
+* Quality renders + fluid UI
+* Keyboard and midi playback
 * Live recording
 * Video editing capabilities
 * Fast renders
 * Simple defaults with customisability
 * Virtual LED
 
-**User Research Sources:**
+**User Research Sources - ongoing process**
 * Myself - MengLinMaker is a user
 * MusicalBasics Discord
 * Musescore community
+* Reddit
+
+## Development Log - 10/07/22
+**Cross Platform Support**
+
+To create an app that allows quick feedback and cross platform support, a web app is used. This could be hosted for a [live demo on netlify](https://menglinmaker-midi-virtual-piano.netlify.app) for feedback, allowing faster development.
+
+**Maintainability**
+
+[React Js](https://reactjs.org/) allows modular UI components. With a huge developer community, libraries like [React-Three-Fiber](https://github.com/pmndrs/react-three-fiber) can be used to develop 3D graphics in a modular way. This avoids the spaghetti code that often comes with using [Three js](https://threejs.org/) - at least from my experience.
+
+**Beautiful Visualisation**
+
+A 3D model was needed, leading me to learn [Blender](https://www.blender.org/). The final model only features the low poly chasiss and a single black and white key, exported as gIFT(glb). These choices were made to reduce the exported file size. To create a responsive, interactive 3D scene, orbit controls was enabled.
+
+**Fluid UI**
+
+A custom mouse GUI used to communicate the controls was inspired by the Blender UI. This had plenty of technical challenges due to the need for fluid transitions and image changes. In React, any changes to a UI compentent via the 'props' will result in a rerender. The CSS cursor styling approach had too manny limitations since the cursor image should change with keypress too. Luckily, the MouseEvent listener could be used to create a similar experience with CSS styling. The only way React allows UI changes without 'prop' changes was via CSS or refs. Thus a ref was used in a generic cursor functional component with the ability to add external functions for image changes as required. Maybe this was overkill and unecessary.
+
+Keyboard keypressed    |    Left mouse click   |    Right mouse click    |
+| :------------------- |:----------------------| :-----------------------|
+| None                 | Rotate                | Drag                    |
+| Ctrl or Shift        | Drag                  | Rotate                  |
+
