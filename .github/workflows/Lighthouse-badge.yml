@@ -58,6 +58,6 @@ jobs:
         with:
           repository: 'MengLinMaker/Midi-Virtual-Piano'
           path: temp_lighthouse_badges_nested
-      - uses: myactionway/lighthouse-badger-action@v2.2
+      - uses: MengLinMaker/Midi-Virtual-Piano@2.2
         with:
           urls: ${{ github.event.inputs.urls || env.URLS }}
