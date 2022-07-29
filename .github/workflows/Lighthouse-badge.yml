@@ -56,7 +56,7 @@ jobs:
           ref: ${{ env.BRANCH }}
       - uses: actions/checkout@v3
         with:
-          repository: 'myactionway/lighthouse-badges'
+          repository: 'MengLinMaker/Midi-Virtual-Piano'
           path: temp_lighthouse_badges_nested
       - uses: myactionway/lighthouse-badger-action@v2.2
         with:
