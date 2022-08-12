@@ -150,7 +150,3 @@ The traditional approach is to add an mp3 for each pitch. This would result in 8
 
 **Receiving Feedback**
 I have completed the basic sound, visual and controls for this app. Thus, it is a good idea to receive feedback. I have posted my app on some Facebook groups, Reddit and Discord groups. Unfortunately, I have not received much feedback or engagement. I have tried using a poll for engagement. I did get a lot of comments about how fun the app was. So in terms of visuals, sound and interactivity, I have succeeded. Ultimately the question I would like to answer is: "would someone use this app over another?"
-
-<div>&nbsp</div>
-
-## Development Log - 31/07/22
