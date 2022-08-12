@@ -22,15 +22,19 @@
 </div>
 
 
-
+<div>&nbsp</div>
 
 ## Play a song
 * **Press a key** - :computer_mouse: Left/Right Click
-* **Use you keyboard** - :keyboard: Press
+* **Use your keyboard** - :keyboard: Press
+
+<div>&nbsp</div>
 
 ## Navigate scene
 * **Rotate** - :computer_mouse: Left Click
 * **Drag** - :computer_mouse:	Right Click
+
+<div>&nbsp</div>
 
 ## Credit
 
@@ -56,10 +60,13 @@ Code inspirations and dependencies
 
 
 
+<div>&nbsp</div><div>&nbsp</div><div>&nbsp</div><div>&nbsp</div><div>&nbsp</div>
 
 # Development Process
 ## The problem
-There are many piano visualisation apps. However, finding a good app has proven to be very difficult and quite a common question. Most visualisers are not 'beautiful' or have good audio quality or none at all. Some apps require payment. Some have a lot of bugs. Some are not cross platform. Ultimately a visualiser can be used to teach and enhance expression.
+There are many piano visualisation apps. However, finding a good app has proven to be very difficult and quite a common question. Most visualisers are not 'beautiful' or have good audio quality or none at all. Some apps require payment. Some have a lot of bugs. Some are not cross-platform. Ultimately a visualiser can be used to teach and enhance expression.
+
+<div>&nbsp</div>
 
 ## Aim
 **To create an app that simplifies the video creation workflow for composers. (specifically for youtube piano composers). User experience is top priority**
@@ -68,12 +75,14 @@ There are many piano visualisation apps. However, finding a good app has proven 
 * What is the fastest workflow?
 * Why are certain types of visualisations used?
 
-**Perfromance measures:**
+**Performance measures:**
 * Workflow time reduction
 * Time spent on app compared to competitors
 
+<div>&nbsp</div>
+
 ## Research - 03/07/22
-By identifying the strengths and weaknesses of existing apps, we can determine which features can enhance the user experience. One area that was lacking was 3D piano visualisations and very nice looking backgrounds. Most are designed to have pure utility in mind with midi visualisation.
+By identifying the strengths and weaknesses of existing apps, we can determine which features can enhance the user experience. One area that was lacking was 3D piano visualisations and aesthetic backgrounds. Most are designed to have pure utility in mind with midi visualisation.
 
  Competition                                    | Pros                                          | Cons                                                   |
 | :-------------------------------------------- |:----------------------------------------------| :------------------------------------------------------|
@@ -84,8 +93,8 @@ By identifying the strengths and weaknesses of existing apps, we can determine w
 | Blender                                       | tremendous control. Quality render.           | Time consuming. Slow render.                           |
 | [Synthesia](https://synthesiagame.com/)       | Easy to use.                                  | Simple looking. Less customisability.               |
 
-**Desirable Features: most importand to lease important**
-* Cross platform support - Windows, MacOS, Linux...
+**Desirable Features: most important to least important**
+* Cross-platform support - Windows, MacOS, Linux...
 * Quality renders + fluid UI
 * Keyboard and midi playback
 * Live recording
@@ -100,10 +109,12 @@ By identifying the strengths and weaknesses of existing apps, we can determine w
 * Musescore community
 * Reddit
 
+<div>&nbsp</div>
+
 ## Development Log - 10/07/22
 **Cross Platform Support**
 
-To create an app that allows quick feedback and cross platform support, a web app is used. This could be hosted for a [live demo on netlify](https://menglinmaker-midi-virtual-piano.netlify.app) for feedback, allowing faster development.
+To create an app that allows quick feedback and cross-platform support, a web app is used. This could be hosted for a [live demo on netlify](https://menglinmaker-midi-virtual-piano.netlify.app) for feedback, allowing faster development.
 
 **Maintainability**
 
@@ -111,27 +122,35 @@ To create an app that allows quick feedback and cross platform support, a web ap
 
 **Beautiful Visualisation**
 
-A 3D model was needed, leading me to learn [Blender](https://www.blender.org/). The final model only features the low poly chasiss and a single black and white key, exported as gIFT(glb). These choices were made to reduce the exported file size. To create a responsive, interactive 3D scene, orbit controls was enabled.
+A 3D model was needed, leading me to learn [Blender](https://www.blender.org/). The final model only features the low poly chassis and a single black and white key, exported as gIFT(glb). These choices were made to reduce the exported file size. To create a responsive, interactive 3D scene, orbit control is enabled.
 
 **Fluid UI**
 
-A custom mouse GUI used to communicate the controls was inspired by the Blender UI. This had plenty of technical challenges due to the need for fluid transitions and image changes. In React, any changes to a UI compentent via the 'props' will result in a rerender. The CSS cursor styling approach had too manny limitations since the cursor image should change with keypress too. Luckily, the MouseEvent listener could be used to create a similar experience with CSS styling. The only way React allows UI changes without 'prop' changes was via CSS or refs. Thus a ref was used in a generic cursor functional component with the ability to add external functions for image changes as required. Maybe this was overkill and unecessary.
+A custom mouse GUI used to communicate the controls was inspired by the Blender UI. This had plenty of technical challenges due to the need for fluid transitions and image changes. In React, any changes to a UI component via the 'props' will result in a rerender. The CSS cursor styling approach had too many limitations since the cursor image should change with keypress too. Luckily, the MouseEvent listener could be used to create a similar experience with CSS styling. The only way React allows UI changes without 'prop' changes was via CSS or refs. Thus a ref was used in a generic cursor functional component with the ability to add external functions for image changes as required. Maybe this was overkill and unnecessary.
 
 Keyboard keypressed    |    Left mouse click   |    Right mouse click    |
 | :------------------- |:----------------------| :-----------------------|
 | None                 | Rotate                | Drag                    |
 | Ctrl or Shift        | Drag                  | Rotate                  |
 
+<div>&nbsp</div>
+
 ## Development Log - 17/07/22
 **Managing EventListeners**
-One of the challenges with managing events on a virtual keyboard is performance and state management. Normally this would not be a challenge in plain javascript. However, react does not allow you to change states easily without rerenders. External state management libraries appear to have the same updating issue. Custom hooks are also too restrictive, since they cannot be used inside another event. The solution that I ended up using was a singleton class with [RXJS](https://rxjs.dev/) with listener suscribers. This allows data to be stored from each event as a history, providing additional information not available from a traditional event listener. The single event listener used will drastically reduce the number of event listeners, increasing performance. This can also be used in a scenario where combo keys are needed. In summary, this behaves like a custom event listener.
+One of the challenges with managing events on a virtual keyboard is performance and state management. Normally this would not be a challenge in plain javascript. However, react does not allow you to change states easily without rerenders. External state management libraries appear to have the same updating issue. Custom hooks are also too restrictive since they cannot be used inside another event. The solution that I ended up using was a singleton class with [RXJS](https://rxjs.dev/) with listener subscribers. This allows data to be stored from each event as history, providing additional information not available from a traditional event listener. The single event listener used will drastically reduce the number of event listeners, increasing performance. This can also be used in a scenario where combo keys are needed. In summary, this behaves like a custom event listener.
 
 **3D Animation With Keyboard Controls**
-Smooth "key" animations with no choppy rerenders can be done using refs and a physics based library: [react-spring](https://react-spring.dev/). A ref from the "chasis" component was required for global state management without rerenders. IDs assigned to each key can be used in some functions to pass the state back up to the "chasis" component. Overall, the result is a fluid, uninterupted animation.
+Smooth "key" animations with no choppy rerenders can be done using refs and a physics-based library: [react-spring](https://react-spring.dev/). A ref from the "chassis" component was required for global state management without rerenders. IDs assigned to each key can be used in some functions to pass the state back up to the "chassis" component. Overall, the result is a fluid, uninterrupted animation.
+
+<div>&nbsp</div>
 
 ## Development Log - 24/07/22
 **Adding Piano Sound**
-The traditional approach is to add an mp3 for each pitch. This would result in 88 x 200kb mp3, which is incredibly large. I would like to minimise the website size without sacrificing sound quality. The best approach is to use a few sample pitches to generate the missing pitches. I have tried may libraries: React-sound-font, Midi js, Tone js, sound-font. Unfortunately, there are a lot of bugs and legacy code. The final solution was from [iBundi - Open-Web-Piano](https://github.com/iBundin/Open-Web-Piano). This approach minimised 
+The traditional approach is to add an mp3 for each pitch. This would result in 88 x 200kb mp3, which is incredibly large. I would like to minimise the website size without sacrificing sound quality. The best approach is to use a few sample pitches to generate the missing pitches. I have tried many libraries: React-sound-font, Midi js, Tone js and sound-font. Unfortunately, there are a lot of bugs and legacy code. The final solution was from [iBundi - Open-Web-Piano](https://github.com/iBundin/Open-Web-Piano). This approach minimised 
 
 **Receiving Feedback**
-I have completed of the basic sound, visual and controls for this app. Thus, it is a good idea to recieve feedback. I have posted my app into some Facebook groups, Reddit and Discord groups. Unfortunately, I have not recieved much feedback nor engagement. I have tried using a poll for engagement. I did get a lot of comments about how fun the app was. So in terms of visuals, sound and interactivity, I have succeeded. Ultimately the question I would like to answer is: "would someone use this app over another?"
+I have completed the basic sound, visual and controls for this app. Thus, it is a good idea to receive feedback. I have posted my app on some Facebook groups, Reddit and Discord groups. Unfortunately, I have not received much feedback or engagement. I have tried using a poll for engagement. I did get a lot of comments about how fun the app was. So in terms of visuals, sound and interactivity, I have succeeded. Ultimately the question I would like to answer is: "would someone use this app over another?"
+
+<div>&nbsp</div>
+
+## Development Log - 31/07/22
