@@ -19,6 +19,7 @@
 <img src="https://img.shields.io/github/languages/code-size/menglinmaker/Midi-Virtual-Piano?style=flat-square">
 <img src="https://img.shields.io/github/workflow/status/menglinmaker/Midi-Virtual-Piano/Continuous Integration?style=flat-square">
 <img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=success&up_message=online&url=https://menglinmaker-midi-virtual-piano.netlify.app/&style=flat-square">
+<img src="https://tokei.ekzhang.com/b1/github/menglinmaker/Midi-Virtual-Piano">
 </div>
 
 
