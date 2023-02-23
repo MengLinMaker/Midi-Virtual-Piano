@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-spring/core": "^9.5.1",
+    "@react-spring/core": "^9.7.0",
     "@react-spring/three": "^9.5.2",
     "@react-three/drei": "^9.17.1",
     "@react-three/fiber": "^8.2.0",
