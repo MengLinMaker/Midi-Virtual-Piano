@@ -8,12 +8,12 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
         node-version: [current]
         os: [ubuntu-latest, windows-latest, macos-latest]
+  
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v3
@@ -22,6 +22,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    - run: npm run test --if-present
-    - run: npm run build --if-present
+    - run: yarn install
+    - run: yarn run test --if-present
+    - run: yarn run build --if-present
