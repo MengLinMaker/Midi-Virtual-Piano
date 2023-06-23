@@ -10,7 +10,7 @@
   "dependencies": {
     "@react-spring/core": "^9.7.2",
     "@react-spring/three": "^9.7.2",
-    "@react-three/drei": "^9.74.15",
+    "@react-three/drei": "^9.77.3",
     "@react-three/fiber": "^8.13.3",
     "@react-three/postprocessing": "^2.7.1",
     "react": "^18.0.0",
